@@ -1,5 +1,11 @@
 package pl.kriss3.bcit.comp1451;
 
+/**
+ * 
+ * @author kszczurowski
+ * @see https://github.com/kriss3/BCIT_JavaSemester02-COMP1451_Assignment02.git
+ * @since 2017-03-11
+ */
 public class Boat extends Vehicle implements ISteerable, Comparable<Boat>
 {
 	private boolean isMotorized;
@@ -29,8 +35,8 @@ public class Boat extends Vehicle implements ISteerable, Comparable<Boat>
 	}
 
 	@Override
-	public int compareTo(Boat boat) {
-		// TODO Auto-generated method stub
+	public int compareTo(Boat boat) 
+	{
 		return 0;
 	}
 

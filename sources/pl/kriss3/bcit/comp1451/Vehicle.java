@@ -1,5 +1,11 @@
 package pl.kriss3.bcit.comp1451;
 
+/**
+ * Abstract class to represent different type of Vehicle objects;
+ * @author kszczurowski
+ * @see https://github.com/kriss3/BCIT_JavaSemester02-COMP1451_Assignment02.git
+ * @since 2017-03-11
+ */
 public abstract class Vehicle 
 {
 	private int year;
@@ -43,8 +49,4 @@ public abstract class Vehicle
 	{
 		this.model = model;
 	}
-
-	
-	
-	
 }

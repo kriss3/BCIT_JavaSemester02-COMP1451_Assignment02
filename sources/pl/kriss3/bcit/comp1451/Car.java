@@ -1,5 +1,11 @@
 package pl.kriss3.bcit.comp1451;
 
+/**
+ * 
+ * @author Krzysztof Szczurowski
+ * @see https://github.com/kriss3/BCIT_JavaSemester02-COMP1451_Assignment02.git
+ * @since 2017-03-11
+ */
 public class Car extends Vehicle implements ISteerable, Comparable<Car>
 {
 	private int horsePower;
@@ -37,21 +43,18 @@ public class Car extends Vehicle implements ISteerable, Comparable<Car>
 	@Override
 	public void accelerate() 
 	{
-		// TODO Auto-generated method stub
-		
+		System.out.println(this.getClass().getSimpleName() + " is INCREASING speed!");
 	}
 
 	@Override
 	public void steerLeft() 
 	{
-		// TODO Auto-generated method stub
-		
+		System.out.println(this.getClass().getSimpleName() + " is turning LEFT!");
 	}
 
 	@Override
 	public void steerRight() 
 	{
-		// TODO Auto-generated method stub
-		
+		System.out.println(this.getClass().getSimpleName() + " is turning RIGHT!");	
 	}
 }

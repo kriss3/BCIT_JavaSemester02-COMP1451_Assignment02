@@ -1,5 +1,11 @@
 package pl.kriss3.bcit.comp1451;
 
+/**
+ * 
+ * @author kszczurowski
+ * @see https://github.com/kriss3/BCIT_JavaSemester02-COMP1451_Assignment02.git
+ * @since 2017-03-11
+ */
 public class Airplane extends Vehicle implements ISteerable, Comparable<Airplane>
 {
 	private int maximumHeightFeet;
