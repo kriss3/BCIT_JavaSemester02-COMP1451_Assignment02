@@ -1,5 +1,8 @@
 package pl.kriss3.bcit.comp1451;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Starting point of Assignment 02
  * @author Krzysztof Szczurowski
@@ -11,5 +14,15 @@ public class Main
 	public static void main(String[] args)
 	{
 		System.out.println("Assignment 02 Start ...");
+		run();
+	}
+	
+	private static void run()
+	{
+		Car c = new Car(1999, "Fiat", "126p", 12);
+		System.out.println(c.toString());
+		
+		List<Car> cars = new ArrayList<Car>();
+		cars.add(c);
 	}
 }
