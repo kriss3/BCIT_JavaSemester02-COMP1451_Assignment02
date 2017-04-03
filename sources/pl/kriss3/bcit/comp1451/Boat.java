@@ -30,8 +30,31 @@ public class Boat extends Vehicle implements ISteerable, Comparable<Boat>
 	@Override
 	public String toString()
 	{
-		return String.format("This %s is a %s %s %s (%s motor)", 
-				this.getClass().getSimpleName(), super.getYear(), super.getMake(), super.getModel(), getVerb());
+		return String.format("This %s is a %s %s %s (%s motor).", 
+				this.getClass().getSimpleName().toLowerCase(), super.getYearManufactured(), super.getMake(), super.getModel(), getVerb());
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (isMotorized ? 1231 : 1237);
+		return result;
+	}
+
+	
+	@Override
+	public boolean equals(Object boatObj) {
+		if (this == boatObj)
+			return true;
+		if (boatObj == null)
+			return false;
+		if (!(boatObj instanceof Boat))
+			return false;
+		Boat other = (Boat) boatObj;
+		if (isMotorized != other.isMotorized)
+			return false;
+		else return true;
 	}
 
 	@Override
@@ -63,6 +86,13 @@ public class Boat extends Vehicle implements ISteerable, Comparable<Boat>
 	//add proper implementation - should return either with or without verb
 	private String getVerb()
 	{
-		return String.format("", isMotorized);
+		String result = null;
+		if(isMotorized)
+			result = "with";
+		else 
+			result = "without";
+		
+		return result;
 	}
+
 }

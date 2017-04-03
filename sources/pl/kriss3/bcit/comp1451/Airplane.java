@@ -31,10 +31,32 @@ public class Airplane extends Vehicle implements ISteerable, Comparable<Airplane
 	@Override
 	public String toString()
 	{
-		return String.format("This %s is a %s %s %s that can reach %s feet", 
-				this.getClass().getSimpleName(), super.getYear(), super.getMake(), super.getModel(), maximumHeightFeet);
+		return String.format("This %s is a %s %s %s that can reach %s feet.", 
+				this.getClass().getSimpleName().toLowerCase(), super.getYearManufactured(), super.getMake(), super.getModel(), maximumHeightFeet);
 	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + maximumHeightFeet;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object airplaneObj) {
+		if (this == airplaneObj)
+			return true;
+		if (airplaneObj == null)
+			return false;
+		if (!(airplaneObj instanceof Airplane))
+			return false;
+		Airplane other = (Airplane) airplaneObj;
+		if (Math.abs(this.getMaximumHeightFeet() - other.getMaximumHeightFeet()) <=1000)
+			return true;
+		else return false;
+	}
+
 	@Override
 	public int compareTo(Airplane ap) 
 	{

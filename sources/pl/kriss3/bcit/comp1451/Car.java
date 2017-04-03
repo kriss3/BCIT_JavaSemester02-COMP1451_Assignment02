@@ -26,12 +26,11 @@ public class Car extends Vehicle implements ISteerable, Comparable<Car>
 		this.horsePower = horsePower;
 	}
 
-	//This car is a 1999 Toyota Corrola with 140 hp.
 	@Override
 	public String toString() 
 	{
-		return String.format("This %s is a %s %s %s with %s hp", 
-				this.getClass().getSimpleName(), super.getYear(), super.getMake(), super.getModel(), horsePower);
+		return String.format("This %s is a %s %s %s with %s hp.", 
+				this.getClass().getSimpleName().toLowerCase(), super.getYearManufactured(), super.getMake(), super.getModel(), horsePower);
 	}
 	
 	@Override
@@ -40,6 +39,36 @@ public class Car extends Vehicle implements ISteerable, Comparable<Car>
 		return 0;
 	}
 
+	
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + horsePower;
+		return result;
+	}
+
+	
+	@Override
+	public boolean equals(Object otherCar) 
+	{
+		if (this == otherCar)
+			return true;
+		if (otherCar == null)
+			return false;
+		if (!(otherCar instanceof Car))
+			return false;
+		
+		Car other =  (Car)otherCar;
+		
+		if(Math.abs(this.getHorsePower() - other.getHorsePower()) <= 10)
+			return true;
+		else 
+			return false;
+	}
+
+	
 	@Override
 	public void accelerate() 
 	{

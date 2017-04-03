@@ -8,26 +8,25 @@ package pl.kriss3.bcit.comp1451;
  */
 public abstract class Vehicle 
 {
-	private int year;
+	private int yearManufactured;
 	private String make;
 	private String model;
 	
-	
-	public int getYear() 
+	public Vehicle(int yearManufactured, String make, String model) 
 	{
-		return year;
-	}
-	
-	public Vehicle(int year, String make, String model) 
-	{
-		setYear(year);
+		setYearManufactured(yearManufactured);
 		setMake(make);
 		setModel(model);
 	}
-
-	public void setYear(int year) 
+	
+	public int getYearManufactured() 
 	{
-		this.year = year;
+		return this.yearManufactured;
+	}
+
+	public void setYearManufactured(int year) 
+	{
+		this.yearManufactured = year;
 	}
 	
 	public String getMake() 
