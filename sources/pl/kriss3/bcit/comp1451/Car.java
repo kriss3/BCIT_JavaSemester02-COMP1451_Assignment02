@@ -23,7 +23,7 @@ public class Car extends Vehicle implements ISteerable, Comparable<Car>
 
 	public void setHorsePower(int horsePower) 
 	{
-		this.horsePower = horsePower;
+		this.horsePower = horsePower <= 0 ? 75 : horsePower;
 	}
 
 	@Override
