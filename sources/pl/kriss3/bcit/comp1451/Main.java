@@ -15,7 +15,7 @@ public class Main
 	
 	private static void run()
 	{
-		System.out.println("Assignment 02 Start ...");
+		System.out.println("Assignment 02 Start ...\n");
 		Helper.addValues();
 		System.out.println("Finished !!");
 	}

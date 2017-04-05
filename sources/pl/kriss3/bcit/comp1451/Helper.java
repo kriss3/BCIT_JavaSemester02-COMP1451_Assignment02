@@ -18,7 +18,7 @@ public class Helper
 		print(cars);
 		System.out.println();
 		Collections.sort(cars);
-		System.out.println("CARS after SORT:");
+		System.out.println("CARS after SORT (by Horse Power):");
 		print(cars);
 		System.out.println();
 		
@@ -31,7 +31,7 @@ public class Helper
 		print(boats);
 		System.out.println();
 		Collections.sort(boats);
-		System.out.println("BOATS after SORT:");
+		System.out.println("BOATS after SORT (aby year manufactured):");
 		print(boats);
 		System.out.println();
 		
@@ -45,7 +45,7 @@ public class Helper
 		print(airplanes);
 		System.out.println();
 		Collections.sort(airplanes);
-		System.out.println("AIRPLANES after SORT:");
+		System.out.println("AIRPLANES after SORT (by altitude):");
 		print(airplanes);
 		System.out.println();
 	}
