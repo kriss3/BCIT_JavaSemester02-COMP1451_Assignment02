@@ -36,13 +36,12 @@ public class Car extends Vehicle implements ISteerable, Comparable<Car>
 	@Override
 	public int compareTo(Car car) 
 	{
-		return 0;
+		return this.horsePower - car.horsePower;
 	}
-
-	
 	
 	@Override
-	public int hashCode() {
+	public int hashCode() 
+	{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + horsePower;

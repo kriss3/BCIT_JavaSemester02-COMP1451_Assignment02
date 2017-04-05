@@ -2,7 +2,7 @@ package pl.kriss3.bcit.comp1451;
 
 /**
  * 
- * @author kszczurowski
+ * @author Krzysztof Szczurowski
  * @see https://github.com/kriss3/BCIT_JavaSemester02-COMP1451_Assignment02.git
  * @since 2017-03-11
  */
@@ -60,7 +60,7 @@ public class Airplane extends Vehicle implements ISteerable, Comparable<Airplane
 	@Override
 	public int compareTo(Airplane ap) 
 	{
-		return 0;
+		return this.maximumHeightFeet - ap.maximumHeightFeet;
 	}
 
 	@Override
@@ -73,7 +73,6 @@ public class Airplane extends Vehicle implements ISteerable, Comparable<Airplane
 	public void steerLeft() 
 	{
 		System.out.println("Flying LEFT and Down !!!");
-		
 	}
 
 	@Override

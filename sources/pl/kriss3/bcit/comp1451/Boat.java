@@ -57,10 +57,11 @@ public class Boat extends Vehicle implements ISteerable, Comparable<Boat>
 		else return true;
 	}
 
+	
 	@Override
 	public int compareTo(Boat boat) 
 	{
-		return 0;
+		return this.getYearManufactured() - boat.getYearManufactured();
 	}
 
 	@Override
@@ -86,13 +87,7 @@ public class Boat extends Vehicle implements ISteerable, Comparable<Boat>
 	//add proper implementation - should return either with or without verb
 	private String getVerb()
 	{
-		String result = null;
-		if(isMotorized)
-			result = "with";
-		else 
-			result = "without";
-		
-		return result;
+		return isMotorized ? "with" : "without";
 	}
 
 }
